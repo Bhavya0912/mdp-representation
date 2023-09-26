@@ -1,44 +1,56 @@
 # MDP REPRESENTATION
 
 ## AIM:
-To represent any one real-world problem in MDP form.
+To represent a Markov Decision Process(MDP) problem in the following ways.
+
+1.Text representation
+
+2.Graphical representation
+
+3.Python - Dictonary representation
 
 ## PROBLEM STATEMENT:
-To develop a game application,the role of the agent is to promote the character on a quest to reach higher levels and gain rewards.
-
 ### Problem Description
-{L1,L2,L3}-->{0,1,2}<br>
-Develop a game application where an agent assists a character on a quest to advance through levels {L1, L2, L3} and earn rewards, with the state space represented as {0, 1, 2}.
+An agent needs to pick product B from a supermarket where there are three products A , B and C
 
 ### State Space
-0,1,2
+{Product A , Product B , Product C}
 
 ### Sample State
-L2->Level2,1
+Product A
 
 ### Action Space
-move backward<br>
-move forward
+[Left , Right , Pick}
 
 ### Sample Action
-move forward->character of the game reaches to higher level
+Left
 
 ### Reward Function
-+1, if the character of the game reaches the next level<br>
-0, Otherwise
-         
++1 - when an agent move to the right side and pick product B
+0 - Otherwise
 
 ### Graphical Representation
-![348988fc-3294-42d0-bcc6-4f82abb105f8](https://github.com/Bhavya0912/mdp-representation/assets/75235293/d7d3e21a-1973-494e-94e6-d9d277bef5dc)
-
-
+![image](https://github.com/Sandhyacharu/mdp-representation/assets/75235167/3e686e89-65cc-4d25-81bb-a0eefc94ba7c)
 
 ## PYTHON REPRESENTATION:
-![image](https://github.com/Bhavya0912/mdp-representation/assets/75235293/3d93886d-dc51-47b3-bab9-b26d6228e2a2)
-
-
+```python3
+P = {
+    0:{
+        0: [(1.0,0,0.0,True)],
+        1: [(1.0,0,0.0,True)]
+    },
+    1:{
+        0: [(1.0,0,0.0,True)],
+        1: [(1.0,2,1.0,True)]
+    },
+    2:{
+        0: [(1.0,2,0.0,True)],
+        1: [(1.0,2,0.0,True)]
+    }
+}
+```
 ## OUTPUT:
-![image](https://github.com/Bhavya0912/mdp-representation/assets/75235293/47abe0bb-9b37-4a94-9add-c6f35ab49a96)
+![image](https://github.com/Sandhyacharu/mdp-representation/assets/75235167/2c94eeb9-7731-4901-b5a4-c78a27ff4c19)
 
 ## RESULT:
-Thus the given real world problem is successfully represented in a MDP form.
+Thus, an environment to check whether the child plays or stay at home is created according to the weather conditions.
